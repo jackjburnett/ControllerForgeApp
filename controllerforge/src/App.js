@@ -1,22 +1,26 @@
-import React, { useState } from 'react';
+import React, { useContext } from 'react';
 import './App.css';
 import STLViewer from './STLViewer';
-import {lightTheme, darkTheme} from './colors';
+import { ThemeProvider, ThemeContext } from './ThemeContext';
+
+const AppContent = () => {
+    const { theme, toggleTheme } = React.useContext(ThemeContext);
+
+    return (
+        <div style={{ background: theme.primary }}>
+            <STLViewer url="/ControllerForge.stl" />
+            <button onClick={toggleTheme} style={{ backgroundColor: theme.secondary, color: theme.primary }}>
+                Toggle Theme
+            </button>
+        </div>
+    );
+};
 
 function App() {
-    const [currentTheme, setCurrentTheme] = useState(darkTheme); // Initialize state with darkTheme
-
-    const toggleTheme = () => {
-        // Toggle between lightTheme and darkTheme based on currentTheme
-        setCurrentTheme(currentTheme === lightTheme ? darkTheme : lightTheme);
-    };
-
-  return (
-      <div style={{background: currentTheme.primary}}>
-          <STLViewer url="/ControllerForge.stl"/>
-          <button onClick={toggleTheme} style={{backgroundColor: currentTheme.secondary, color:currentTheme.primary}}>Toggle Theme</button>
-      </div>
-
+    return(
+    <ThemeProvider>
+        <AppContent />
+    </ThemeProvider>
   );
 }
 
