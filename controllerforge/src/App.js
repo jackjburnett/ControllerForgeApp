@@ -3,7 +3,8 @@ import './App.css';
 import STLViewer from './STLViewer';
 import {ThemeProvider, ThemeContext} from './ThemeContext';
 import './fonts.css';
-import ClickableInfoIcon from "./ClickableInfoIcon";
+import InfoIcon from '@mui/icons-material/Info';
+import GitHubIcon from '@mui/icons-material/GitHub';
 
 const AppContent = () => {
     const {theme, toggleTheme} = React.useContext(ThemeContext);
@@ -26,10 +27,19 @@ const AppContent = () => {
         <button style={{backgroundColor: theme.tertiary, color: theme.contrast, fontFamily: "Lexend Deca"}}>
             Button 4
         </button>
-        <ClickableInfoIcon onClick={toggleTheme}/>
+        <button style={{border: 'none', background: 'none', cursor: 'pointer'}}>
+            <InfoIcon style={{fontSize: 32, color: theme.contrast}}/>
+        </button>
         <STLViewer url="/ControllerForge.stl"/>
-        <a><i className="fa fa-dribbble fa-4x"></i></a>
-
+        <button style={{backgroundColor: theme.tertiary, color: theme.contrast, fontFamily: "Lexend Deca"}}>
+            Button 2
+        </button>
+        <button style={{backgroundColor: theme.tertiary, color: theme.contrast, fontFamily: "Lexend Deca"}}>
+            Button 3
+        </button>
+        <button style={{border: 'none', background: 'none', cursor: 'pointer'}}>
+            <GitHubIcon style={{fontSize: 32, color: theme.contrast}}/>
+        </button>
     </div>);
 };
 
