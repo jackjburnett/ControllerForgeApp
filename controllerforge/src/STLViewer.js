@@ -25,23 +25,24 @@ const Model = ({url}) => {
     const {theme} = useContext(ThemeContext);
 
     return (<mesh geometry={geometry} ref={meshRef}>
-            <meshStandardMaterial color={theme.primary}/>
-        </mesh>);
+        <meshStandardMaterial color={theme.secondary}/>
+    </mesh>);
 };
 
 const STLViewer = ({url}) => {
     const {theme} = useContext(ThemeContext);
 
+    // TODO: Sort lighting
     return (<div className="stl-viewer-container" style={{background: theme.tertiary}}>
-            <Canvas className="stl-canvas" camera={{position: [0, 0, 200]}}>
-                <ambientLight intensity={0.5}/>
-                <directionalLight position={[10, 10, 5]} intensity={1}/>
-                <OrbitControls/>
-                <React.Suspense fallback={null}>
-                    <Model url={url}/>
-                </React.Suspense>
-            </Canvas>
-        </div>);
+        <Canvas className="stl-canvas" camera={{position: [0, 0, 200]}}>
+            <ambientLight intensity={2}/>
+            <directionalLight position={[50, 10, 10]} intensity={1}/>
+            <OrbitControls/>
+            <React.Suspense fallback={null}>
+                <Model url={url}/>
+            </React.Suspense>
+        </Canvas>
+    </div>);
 };
 
 export default STLViewer;
