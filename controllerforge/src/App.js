@@ -12,9 +12,9 @@ function App() {
     };
 
   return (
-      <div style={{background: currentTheme.background}}>
+      <div style={{background: currentTheme.primary}}>
           <STLViewer url="/ControllerForge.stl"/>
-          <button onClick={toggleTheme}>Toggle Theme</button>
+          <button onClick={toggleTheme} style={{backgroundColor: currentTheme.secondary, color:currentTheme.primary}}>Toggle Theme</button>
       </div>
 
   );

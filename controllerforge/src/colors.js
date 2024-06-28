@@ -1,16 +1,16 @@
 const lightTheme = {
-    background: '#FBF9F6',
-    text: '#0B1D26',
-    primary: '#204B57',
-    accent: '#F9A20C',
+    primary: '#FBF9F6',
+    contrast: '#0B1D26',
+    secondary: '#204B57',
+    tertiary: '#F9A20C',
     links: '#FBC412'
 };
 
 const darkTheme = {
-    text: '#FBF9F6',
-    background: '#0B1D26',
-    primary: '#204B57',
-    accent: '#F9A20C',
+    contrast: '#FBF9F6',
+    primary: '#0B1D26',
+    text: '#204B57',
+    secondary: '#F9A20C',
     links: '#FBC412'
 }
 
