@@ -3,6 +3,7 @@ import './App.css';
 import STLViewer from './STLViewer';
 import {ThemeProvider, ThemeContext} from './ThemeContext';
 import './fonts.css';
+import ClickableInfoIcon from "./ClickableInfoIcon";
 
 const AppContent = () => {
     const {theme, toggleTheme} = React.useContext(ThemeContext);
@@ -25,6 +26,7 @@ const AppContent = () => {
         <button style={{backgroundColor: theme.tertiary, color: theme.contrast, fontFamily: "Lexend Deca"}}>
             Button 4
         </button>
+        <ClickableInfoIcon onClick={toggleTheme}/>
         <STLViewer url="/ControllerForge.stl"/>
         <a><i className="fa fa-dribbble fa-4x"></i></a>
 
