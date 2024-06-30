@@ -5,6 +5,7 @@ import {ThemeProvider, ThemeContext} from './ThemeContext';
 import './fonts.css';
 import InfoIcon from '@mui/icons-material/Info';
 import GitHubIcon from '@mui/icons-material/GitHub';
+import {thirdParty} from "./colors";
 
 const AppContent = () => {
     const {theme, toggleTheme} = React.useContext(ThemeContext);
@@ -31,10 +32,18 @@ const AppContent = () => {
             <InfoIcon style={{fontSize: 32, color: theme.contrast}}/>
         </button>
         <STLViewer url="/ControllerForge.stl"/>
-        <button style={{backgroundColor: theme.tertiary, color: theme.contrast, fontFamily: "Lexend Deca"}}>
+        <button style={{
+            backgroundColor: thirdParty.orcaSlicerBackground,
+            color: thirdParty.orcaSlicerText,
+            fontFamily: "Lexend Deca"
+        }}>
             Button 2
         </button>
-        <button style={{backgroundColor: theme.tertiary, color: theme.contrast, fontFamily: "Lexend Deca"}}>
+        <button style={{
+            backgroundColor: thirdParty.kicadBackground,
+            color: thirdParty.kicadText,
+            fontFamily: "Lexend Deca"
+        }}>
             Button 3
         </button>
         <button style={{border: 'none', background: 'none', cursor: 'pointer'}}>
