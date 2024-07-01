@@ -60,7 +60,7 @@ const AppContent = () => {
         <button style={{border: 'none', background: 'none', cursor: 'pointer'}}>
             <InfoIcon style={{fontSize: 32, color: theme.contrast}}/>
         </button>
-        <div className="centerContent">
+        <div className="centerContent" style={{background: theme.tertiary, width: "50%"}}>
             {centerContent}
         </div>
         <button style={{

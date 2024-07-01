@@ -30,10 +30,8 @@ const Model = ({url}) => {
 };
 
 const STLViewer = ({url}) => {
-    const {theme} = useContext(ThemeContext);
-
     // TODO: Sort lighting
-    return (<div className="stl-viewer-container" style={{background: theme.tertiary}}>
+    return (
         <Canvas className="stl-canvas" camera={{position: [0, 0, 200]}}>
             <ambientLight intensity={2}/>
             <directionalLight position={[50, 10, 10]} intensity={1}/>
@@ -41,8 +39,7 @@ const STLViewer = ({url}) => {
             <React.Suspense fallback={null}>
                 <Model url={url}/>
             </React.Suspense>
-        </Canvas>
-    </div>);
+        </Canvas>);
 };
 
 export default STLViewer;
