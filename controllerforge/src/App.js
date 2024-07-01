@@ -12,7 +12,8 @@ const AppContent = () => {
     const {theme, toggleTheme} = React.useContext(ThemeContext);
 
     return (<div style={{background: theme.primary}}>
-        <div className="logo" style={{color: theme.secondary, fontFamily: "Lexend Deca"}}>
+        <div className="logo"
+             style={{color: theme.secondary, fontFamily: "Lexend Deca", fontWeight: 900}}>
             <img src={"./logo192.png"} alt={"Logo"}></img>
             ControllerForge
         </div>
