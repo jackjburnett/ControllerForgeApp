@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import STLViewer from './STLViewer';
 import {ThemeProvider, ThemeContext} from './ThemeContext';
 import './fonts.css';

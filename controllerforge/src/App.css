@@ -4,14 +4,11 @@
 
 .logo {
     font-size: 40px;
-    font-family: "Lexend Deca", serif;
+    font-family: "Lexend Deca", sans-serif;
     font-weight: 900;
 }
 
 .centerContent {
     width: 50%;
-}
-
-button {
-    font-family: "Lexend Deca", serif;
+    height: 50vh;
 }
