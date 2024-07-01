@@ -51,7 +51,8 @@ const AppContent = () => {
             KiCad
         </button>
         <button style={{border: 'none', background: 'none', cursor: 'pointer'}}>
-            <GitHubIcon style={{fontSize: 32, color: theme.contrast}}/>
+            <a href="https://github.com/jackjburnett/ControllerForgeApp" target="_blank">
+                <GitHubIcon style={{fontSize: 32, color: theme.contrast}}/></a>
         </button>
     </div>);
 };
