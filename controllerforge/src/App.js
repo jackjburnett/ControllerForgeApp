@@ -29,18 +29,18 @@ const AppContent = () => {
 
     return (<div style={{background: theme.primary}}>
         <div className="logo"
-             style={{color: theme.secondary, fontFamily: "Lexend Deca", fontWeight: 900}}>
+             style={{color: theme.secondary}}>
             <img src={"./logo192.png"} alt={"Logo"}></img>
             ControllerForge
         </div>
         <button
             onClick={() => handleCenterContentChange('ParametersCenterContent')}
-            style={{backgroundColor: theme.secondary, color: theme.primary, fontFamily: "Lexend Deca"}}>
+            style={{backgroundColor: theme.secondary, color: theme.primary}}>
             Get Controller Parameters
         </button>
         <button
             onClick={() => handleCenterContentChange('STEPCenterContent')}
-            style={{backgroundColor: theme.tertiary, color: theme.contrast, fontFamily: "Lexend Deca"}}>
+            style={{backgroundColor: theme.tertiary, color: theme.contrast}}>
             Generate STEP
         </button>
         <button
@@ -60,7 +60,7 @@ const AppContent = () => {
         <button style={{border: 'none', background: 'none', cursor: 'pointer'}}>
             <InfoIcon style={{fontSize: 32, color: theme.contrast}}/>
         </button>
-        <div className="centerContent" style={{background: theme.tertiary, width: "50%"}}>
+        <div className="centerContent" style={{background: theme.tertiary}}>
             {centerContent}
         </div>
         <button style={{

@@ -11,5 +11,4 @@ const thirdParty = {
     orcaSlicerBackground: '#eff0ef', orcaSlicerText: '#009688', kicadBackground: '#1a43d9', kicadText: '#ffffff'
 }
 
-export default lightTheme;
 export {lightTheme, darkTheme, thirdParty};
