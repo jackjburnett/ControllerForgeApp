@@ -1,4 +1,5 @@
 import React from "react";
+import {GenerateSTEP} from "./API";
 
 const ParametersCenterContent = ({handleCenterContentChange}) => (
     <div>
@@ -12,7 +13,7 @@ const STEPCenterContent = ({handleCenterContentChange}) => (
     <div>
         <h1>Generate STEP</h1>
         <p>Details about generating STEP files.</p>
-        <button onClick={() => handleCenterContentChange('DefaultContent')}>Submit</button>
+        <button onClick={() => GenerateSTEP()}>Submit</button>
     </div>
 );
 

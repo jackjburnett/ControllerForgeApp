@@ -1,14 +1,19 @@
 import React, {useState} from 'react';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import STLViewer from './STLViewer';
-import {ThemeProvider, ThemeContext} from './ThemeContext';
+import STLViewer from './components/STLViewer';
+import {ThemeProvider, ThemeContext} from './components/ThemeContext';
 import './fonts.css';
 import InfoIcon from '@mui/icons-material/Info';
 import DarkModeIcon from '@mui/icons-material/DarkMode';
 import GitHubIcon from '@mui/icons-material/GitHub';
-import {thirdParty} from "./colors";
-import {ParametersCenterContent, STEPCenterContent, PCBCenterContent, ConflictCenterContent} from './CenterContent';
+import {thirdParty} from "./components/colors";
+import {
+    ParametersCenterContent,
+    STEPCenterContent,
+    PCBCenterContent,
+    ConflictCenterContent
+} from './components/CenterContent';
 
 const AppContent = () => {
     const {theme, toggleTheme} = React.useContext(ThemeContext);
