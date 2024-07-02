@@ -1,8 +1,8 @@
 import axios from 'axios';
 
-const GenerateSTEP = async (postData) => {
+const GenerateSTEP = async () => {
     try {
-        const formData = require('../../public/test_params.json'); // Read formData.json
+        const formData = require('../../public/testparams.json');
         const response = await axios.post('http://127.0.0.1:5000/generate_stl', formData, {
             headers: {
                 'Content-Type': 'application/json'
