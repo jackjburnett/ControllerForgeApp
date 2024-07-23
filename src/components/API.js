@@ -3,7 +3,7 @@ import axios from 'axios';
 const GenerateSTEP = async () => {
     try {
         const formData = require('../../src/testparams.json');
-        const response = await axios.post('http://127.0.0.1:5000/generate_step, formData, {
+        const response = await axios.post('http://127.0.0.1:5000/generate_step', formData, {
             headers: {
                 'Content-Type': 'application/json'
             },
