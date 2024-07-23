@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/ControllerForgeApp/static/css/main.97b96e11.css",
+    "main.js": "/ControllerForgeApp/static/js/main.65c95dd8.js",
+    "static/js/453.8cc640c3.chunk.js": "/ControllerForgeApp/static/js/453.8cc640c3.chunk.js",
+    "static/media/LexendDeca.ttf": "/ControllerForgeApp/static/media/LexendDeca.affd92df84e8108992b6.ttf",
+    "index.html": "/ControllerForgeApp/index.html",
+    "main.97b96e11.css.map": "/ControllerForgeApp/static/css/main.97b96e11.css.map",
+    "main.65c95dd8.js.map": "/ControllerForgeApp/static/js/main.65c95dd8.js.map",
+    "453.8cc640c3.chunk.js.map": "/ControllerForgeApp/static/js/453.8cc640c3.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.97b96e11.css",
+    "static/js/main.65c95dd8.js"
+  ]
+}
