@@ -37,7 +37,7 @@ const STLViewer = ({url}) => {
             <ambientLight intensity={0.5}/>
             <directionalLight position={[10, 10, 5]} intensity={1}/>
             <OrbitControls/>
-            <React.Suspense}>
+            <React.Suspense>
                 <Model url={url}/>
             </React.Suspense>
         </Canvas>
