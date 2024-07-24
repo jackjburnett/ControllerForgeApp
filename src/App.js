@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import STLViewer from './components/STLViewer';
+import STLViewer from './STLViewer';
 import {ThemeProvider, ThemeContext} from './components/ThemeContext';
 import './fonts.css';
 import InfoIcon from '@mui/icons-material/Info';
