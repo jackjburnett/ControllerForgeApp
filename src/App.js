@@ -15,6 +15,7 @@ import {
     ConflictCenterContent
 } from './components/CenterContent';
 
+
 const AppContent = () => {
     const {theme, toggleTheme} = React.useContext(ThemeContext);
     const [centerContent, setCenterContent] = useState(<STLViewer url="/ControllerForge.stl"/>);
@@ -32,6 +33,7 @@ const AppContent = () => {
             setCenterContent(<STLViewer url="/ControllerForge.stl"/>);
         }
     };
+
 
     return (<div style={{background: theme.primary}}>
         <div className="logo"
