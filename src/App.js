@@ -18,7 +18,7 @@ import {
 
 const AppContent = () => {
     const {theme, toggleTheme} = React.useContext(ThemeContext);
-    const [centerContent, setCenterContent] = useState(<STLViewer url="/ControllerForge.stl"/>);
+    const [centerContent, setCenterContent] = useState(<STLViewer url="./ControllerForge.stl"/>);
 
     const handleCenterContentChange = (type) => {
         if (type === 'ParametersCenterContent') {
@@ -30,7 +30,7 @@ const AppContent = () => {
         } else if (type === 'ConflictCenterContent') {
             setCenterContent(<ConflictCenterContent handleCenterContentChange={handleCenterContentChange}/>);
         } else {
-            setCenterContent(<STLViewer url="/ControllerForge.stl"/>);
+            setCenterContent(<STLViewer url="./ControllerForge.stl"/>);
         }
     };
 
