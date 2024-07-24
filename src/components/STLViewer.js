@@ -1,11 +1,11 @@
+// src/components/STLViewer.js
 import React, {useRef, useEffect, useContext} from 'react';
 import {Canvas, useLoader} from '@react-three/fiber';
 import {OrbitControls} from '@react-three/drei';
 import {STLLoader} from 'three/examples/jsm/loaders/STLLoader';
 import * as THREE from 'three';
+import {ThemeContext} from './ThemeContext';
 import './STLViewer.css';
-import {ThemeContext} from './ThemeContext.js';
-
 
 const Model = ({url}) => {
     const geometry = useLoader(STLLoader, url);
@@ -24,22 +24,24 @@ const Model = ({url}) => {
 
     const {theme} = useContext(ThemeContext);
 
-    return (<mesh geometry={geometry} ref={meshRef}>
-        <meshStandardMaterial color={theme.secondary}/>
-    </mesh>);
+    return (
+        <mesh geometry={geometry} ref={meshRef}>
+            <meshStandardMaterial color={theme.secondary}/>
+        </mesh>
+    );
 };
 
 const STLViewer = ({url}) => {
-    // TODO: Sort lighting
     return (
-        <Canvas className="stl-canvas" camera={{position: [0, 0, 200]}}>
-            <ambientLight intensity={2}/>
-            <directionalLight position={[50, 10, 10]} intensity={1}/>
+        <Canvas style={{height: '100vh'}} camera={{position: [0, 0, 200]}}>
+            <ambientLight intensity={0.5}/>
+            <directionalLight position={[10, 10, 5]} intensity={1}/>
             <OrbitControls/>
-            <React.Suspense fallback={null}>
+            <React.Suspense fallback={<span>Loading...</span>}>
                 <Model url={url}/>
             </React.Suspense>
-        </Canvas>);
+        </Canvas>
+    );
 };
 
 export default STLViewer;
